@@ -21,10 +21,10 @@ This repository contains the source code for a simple Flask chat server, package
 1. Clone the repository: `git clone https://github.com/NechamiWa/rooms-chat`
 
 
-2. Build the Docker image: `docker build -t flask-chat-server .`
+2. Build the Docker image: `docker build -t rooms-chat .`
 
 
-3. Run the Docker container: `docker run -d -p 5000:5000 flask-chat-server`
+3. Run the Docker container: `docker run -p 5000:5000 -v /path/to/local/chat-data:/app/chat-data rooms-chat`
 
 
 4. Access the chat server: Open a web browser and navigate to `http://localhost:5000` to access the chat server.

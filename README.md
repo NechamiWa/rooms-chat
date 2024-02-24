@@ -18,7 +18,7 @@ This repository contains the source code for a simple Flask chat server, package
 ## Usage:
 
 
-1. Clone the repository: `git clone https://github.com/yourusername/flask-chat-server.git`
+1. Clone the repository: `git clone https://github.com/NechamiWa/rooms-chat`
 
 
 2. Build the Docker image: `docker build -t flask-chat-server .`

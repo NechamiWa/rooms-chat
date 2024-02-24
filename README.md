@@ -32,9 +32,4 @@ This repository contains the source code for a simple Flask chat server, package
 ## Contributing:
 Contributions to the project are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
-## License:
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
-#### For more information, please visit the project repository: https://github.com/NechamiWa
+#### For more information, please visit the project repository: https://github.com/NechamiWa/rooms-chat

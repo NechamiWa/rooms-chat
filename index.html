@@ -1,0 +1,36 @@
+  <html>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function room() {
+      var room = window.location.href.substring(window.location.href.lastIndexOf("/")+1);
+      if (room=="") room = "general";
+      return "/api/chat/"+room;
+    }
+
+    function updateChat() {
+      $.get(room(), function(data) {
+        $("#chatbox").text(data);
+        window.setTimeout(updateChat, 1500);
+      })
+    }
+
+    function sendmessage() {
+      $.post(room(), $("#inform").serialize() );
+    }
+
+    $(document).ready(function() {
+      $("#chatbox").text("Loading chat...");
+      $("#sendBtn").click(sendmessage)
+      window.setTimeout(updateChat, 1500);
+    });
+
+  </script>
+  <body>
+    <form id="inform" action="/api/chat" method="POST">
+      Name:<input name="username" type=text>
+      Message:<input name="msg" type=text>
+      <input id="sendBtn" type="button" value="send">
+    </form>
+    <pre id="chatbox">Loading...</pre>
+  </body>
+</html>
